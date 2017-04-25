@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{612C6F51-35A4-4293-8349-1F90E14AB610}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyHoiThao</RootNamespace>
+    <AssemblyName>QuanLyHoiThao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CAN_BO.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPass.Designer.cs">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainWin.Designer.cs">
+      <DependentUpon>frmMainWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyCanBo.Designer.cs">
+      <DependentUpon>frmQuanLyCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyDangKy.Designer.cs">
+      <DependentUpon>frmQuanLyDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyKetQuaThiDau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyKetQuaThiDau.Designer.cs">
+      <DependentUpon>frmQuanLyKetQuaThiDau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyLichDau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyLichDau.Designer.cs">
+      <DependentUpon>frmQuanLyLichDau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyThuChi.Designer.cs">
+      <DependentUpon>frmQuanLyThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KET_QUA_CA_NHAN.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KET_QUA_NHOM.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHOAN_CHI.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHOAN_THU.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LICH_THI.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOP.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MD5Class.cs" />
+    <Compile Include="MON_THI.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGANH.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHOM.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyHoiThao.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHoiThao.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHoiThao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHoiThao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHoiThao.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SINH_VIEN.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAI_KHOAN.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THU_CHI.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRONG_TAI.cs">
+      <DependentUpon>QuanLyHoiThao.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPass.resx">
+      <DependentUpon>frmForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainWin.resx">
+      <DependentUpon>frmMainWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyCanBo.resx">
+      <DependentUpon>frmQuanLyCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyDangKy.resx">
+      <DependentUpon>frmQuanLyDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyKetQuaThiDau.resx">
+      <DependentUpon>frmQuanLyKetQuaThiDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyLichDau.resx">
+      <DependentUpon>frmQuanLyLichDau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyThuChi.resx">
+      <DependentUpon>frmQuanLyThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="QuanLyHoiThao.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyHoiThao.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLyHoiThao.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyHoiThao.edmx</DependentUpon>
+      <LastGenOutput>QuanLyHoiThao.Context.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyHoiThao.edmx.diagram">
+      <DependentUpon>QuanLyHoiThao.edmx</DependentUpon>
+    </None>
+    <None Include="QuanLyHoiThao.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyHoiThao.edmx</DependentUpon>
+      <LastGenOutput>QuanLyHoiThao.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbConnect\dbConnect.csproj">
+      <Project>{b5606599-f253-48c9-9c44-16f3acd008ba}</Project>
+      <Name>dbConnect</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

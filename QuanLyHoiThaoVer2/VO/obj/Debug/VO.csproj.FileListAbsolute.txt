@@ -1,0 +1,5 @@
+D:\Windows Application\QuanLyHoiThaoVer2\VO\bin\Debug\VO.dll
+D:\Windows Application\QuanLyHoiThaoVer2\VO\bin\Debug\VO.pdb
+D:\Windows Application\QuanLyHoiThaoVer2\VO\obj\Debug\VO.csprojResolveAssemblyReference.cache
+D:\Windows Application\QuanLyHoiThaoVer2\VO\obj\Debug\VO.dll
+D:\Windows Application\QuanLyHoiThaoVer2\VO\obj\Debug\VO.pdb

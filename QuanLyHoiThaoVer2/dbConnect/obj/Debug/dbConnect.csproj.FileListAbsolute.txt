@@ -1,0 +1,5 @@
+D:\Windows Application\QuanLyHoiThaoVer2\dbConnect\bin\Debug\dbConnect.dll
+D:\Windows Application\QuanLyHoiThaoVer2\dbConnect\bin\Debug\dbConnect.pdb
+D:\Windows Application\QuanLyHoiThaoVer2\dbConnect\obj\Debug\dbConnect.csprojResolveAssemblyReference.cache
+D:\Windows Application\QuanLyHoiThaoVer2\dbConnect\obj\Debug\dbConnect.dll
+D:\Windows Application\QuanLyHoiThaoVer2\dbConnect\obj\Debug\dbConnect.pdb

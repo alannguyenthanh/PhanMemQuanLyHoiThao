@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyHoiThaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CAN_BO">
+    <Key>
+      <PropertyRef Name="MA_CAN_BO" />
+    </Key>
+    <Property Name="MA_CAN_BO" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="TEN_CAN_BO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CHUC_VU" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DANG_KY">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+      <PropertyRef Name="MSSV" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MSSV" Type="char" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KET_QUA_CA_NHAN">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+      <PropertyRef Name="MSSV" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MSSV" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="GIAI" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HUY_CHUONG" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="KHEN_THUONG_CA_NHAN" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KET_QUA_NHOM">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+      <PropertyRef Name="MA_NHOM" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_NHOM" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="GIAI" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HUY_CHUONG" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="KHEN_THUONG_NHOM" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KHOAN_CHI">
+    <Key>
+      <PropertyRef Name="MA_PHIEU_CHI" />
+    </Key>
+    <Property Name="MA_PHIEU_CHI" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MSSV" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="KET_MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_NHOM" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="NOI_DUNG_CHI" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="NGAY_CHI" Type="datetime" Nullable="false" />
+    <Property Name="SO_TIEN" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KHOAN_THU">
+    <Key>
+      <PropertyRef Name="MA_PHIEU_THU" />
+    </Key>
+    <Property Name="MA_PHIEU_THU" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="MA_LOP" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="NGUOI_NOP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SO_TIEN" Type="float" Nullable="false" />
+    <Property Name="NGAY_THU" Type="datetime" Nullable="false" />
+    <Property Name="DIA_CHI" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LICH_THI">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+      <PropertyRef Name="MSSV" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MSSV" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="STT" Type="bigint" Nullable="false" />
+    <Property Name="NGAY_THI_DAU" Type="datetime" Nullable="false" />
+    <Property Name="GIO_THI_DAU" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOP">
+    <Key>
+      <PropertyRef Name="MA_LOP" />
+    </Key>
+    <Property Name="MA_LOP" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_NGANH" Type="char" MaxLength="30" />
+    <Property Name="TEN_LOP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KHOA_HOC" Type="char" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MON_THI">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="TEN_MON" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NGANH">
+    <Key>
+      <PropertyRef Name="MA_NGANH" />
+    </Key>
+    <Property Name="MA_NGANH" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="TEN_NGANH" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NHOM">
+    <Key>
+      <PropertyRef Name="MA_NHOM" />
+    </Key>
+    <Property Name="MA_NHOM" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_LOP" Type="char" MaxLength="30" />
+    <Property Name="MA_MON" Type="char" MaxLength="30" />
+    <Property Name="SO_LUONG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SINH_VIEN">
+    <Key>
+      <PropertyRef Name="MSSV" />
+    </Key>
+    <Property Name="MSSV" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_NHOM" Type="char" MaxLength="30" />
+    <Property Name="MA_LOP" Type="char" MaxLength="30" />
+    <Property Name="TEN_SV" Type="text" Nullable="false" />
+    <Property Name="DIA_CHI" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="SDT" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="EMAIL" Type="char" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAI_KHOAN">
+    <Key>
+      <PropertyRef Name="MA_CAN_BO" />
+      <PropertyRef Name="TEN_DANG_NHAP" />
+    </Key>
+    <Property Name="MA_CAN_BO" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="TEN_DANG_NHAP" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="MAT_KHAU" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRONG_TAI">
+    <Key>
+      <PropertyRef Name="MA_MON" />
+      <PropertyRef Name="MA_TRONG_TAI" />
+    </Key>
+    <Property Name="MA_MON" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MA_TRONG_TAI" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="TEN_TRONG_TAI" Type="text" Nullable="false" />
+    <Property Name="MAM" Type="char" MaxLength="10" />
+    <Property Name="THOI_GIAN_THI_DAU" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DANG_KY_RELATIONS_MON_THI">
+    <End Role="MON_THI" Type="Self.MON_THI" Multiplicity="1" />
+    <End Role="DANG_KY" Type="Self.DANG_KY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_THI">
+        <PropertyRef Name="MA_MON" />
+      </Principal>
+      <Dependent Role="DANG_KY">
+        <PropertyRef Name="MA_MON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DANG_KY_RELATIONS_SINH_VIE">
+    <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="1" />
+    <End Role="DANG_KY" Type="Self.DANG_KY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINH_VIEN">
+        <PropertyRef Name="MSSV" />
+      </Principal>
+      <Dependent Role="DANG_KY">
+        <PropertyRef Name="MSSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KET_QUA__RELATIONS_MON_THI">
+    <End Role="MON_THI" Type="Self.MON_THI" Multiplicity="1" />
+    <End Role="KET_QUA_CA_NHAN" Type="Self.KET_QUA_CA_NHAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_THI">
+        <PropertyRef Name="MA_MON" />
+      </Principal>
+      <Dependent Role="KET_QUA_CA_NHAN">
+        <PropertyRef Name="MA_MON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KET_QUA__RELATIONS_NHOM">
+    <End Role="NHOM" Type="Self.NHOM" Multiplicity="1" />
+    <End Role="KET_QUA_NHOM" Type="Self.KET_QUA_NHOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOM">
+        <PropertyRef Name="MA_NHOM" />
+      </Principal>
+      <Dependent Role="KET_QUA_NHOM">
+        <PropertyRef Name="MA_NHOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KET_QUA__RELATIONS_SINH_VIE">
+    <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="1" />
+    <End Role="KET_QUA_CA_NHAN" Type="Self.KET_QUA_CA_NHAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINH_VIEN">
+        <PropertyRef Name="MSSV" />
+      </Principal>
+      <Dependent Role="KET_QUA_CA_NHAN">
+        <PropertyRef Name="MSSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHOAN_CH_RELATIONS_KET_QUA_">
+    <End Role="KET_QUA_CA_NHAN" Type="Self.KET_QUA_CA_NHAN" Multiplicity="1" />
+    <End Role="KHOAN_CHI" Type="Self.KHOAN_CHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KET_QUA_CA_NHAN">
+        <PropertyRef Name="MA_MON" />
+        <PropertyRef Name="MSSV" />
+      </Principal>
+      <Dependent Role="KHOAN_CHI">
+        <PropertyRef Name="MA_MON" />
+        <PropertyRef Name="MSSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHOAN_TH_RELATIONS_LOP">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+    <End Role="KHOAN_THU" Type="Self.KHOAN_THU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="MA_LOP" />
+      </Principal>
+      <Dependent Role="KHOAN_THU">
+        <PropertyRef Name="MA_LOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LICH_THI_RELATIONS_MON_THI">
+    <End Role="MON_THI" Type="Self.MON_THI" Multiplicity="1" />
+    <End Role="LICH_THI" Type="Self.LICH_THI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_THI">
+        <PropertyRef Name="MA_MON" />
+      </Principal>
+      <Dependent Role="LICH_THI">
+        <PropertyRef Name="MA_MON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LICH_THI_RELATIONS_SINH_VIE">
+    <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="1" />
+    <End Role="LICH_THI" Type="Self.LICH_THI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINH_VIEN">
+        <PropertyRef Name="MSSV" />
+      </Principal>
+      <Dependent Role="LICH_THI">
+        <PropertyRef Name="MSSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOP_RELATIONS_NGANH">
+    <End Role="NGANH" Type="Self.NGANH" Multiplicity="0..1" />
+    <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGANH">
+        <PropertyRef Name="MA_NGANH" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="MA_NGANH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHOM_RELATIONS_LOP">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="0..1" />
+    <End Role="NHOM" Type="Self.NHOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="MA_LOP" />
+      </Principal>
+      <Dependent Role="NHOM">
+        <PropertyRef Name="MA_LOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHOM_RELATIONS_MON_THI">
+    <End Role="MON_THI" Type="Self.MON_THI" Multiplicity="0..1" />
+    <End Role="NHOM" Type="Self.NHOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_THI">
+        <PropertyRef Name="MA_MON" />
+      </Principal>
+      <Dependent Role="NHOM">
+        <PropertyRef Name="MA_MON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SINH_VIE_RELATIONS_LOP">
+    <End Role="LOP" Type="Self.LOP" Multiplicity="0..1" />
+    <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="MA_LOP" />
+      </Principal>
+      <Dependent Role="SINH_VIEN">
+        <PropertyRef Name="MA_LOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SINH_VIE_RELATIONS_NHOM">
+    <End Role="NHOM" Type="Self.NHOM" Multiplicity="0..1" />
+    <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHOM">
+        <PropertyRef Name="MA_NHOM" />
+      </Principal>
+      <Dependent Role="SINH_VIEN">
+        <PropertyRef Name="MA_NHOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TAI_KHOA_RELATIONS_CAN_BO">
+    <End Role="CAN_BO" Type="Self.CAN_BO" Multiplicity="1" />
+    <End Role="TAI_KHOAN" Type="Self.TAI_KHOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAN_BO">
+        <PropertyRef Name="MA_CAN_BO" />
+      </Principal>
+      <Dependent Role="TAI_KHOAN">
+        <PropertyRef Name="MA_CAN_BO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRONG_TA_RELATIONS_MON_THI">
+    <End Role="MON_THI" Type="Self.MON_THI" Multiplicity="1" />
+    <End Role="TRONG_TAI" Type="Self.TRONG_TAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MON_THI">
+        <PropertyRef Name="MA_MON" />
+      </Principal>
+      <Dependent Role="TRONG_TAI">
+        <PropertyRef Name="MA_MON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyHoiThaoModelStoreContainer">
+    <EntitySet Name="CAN_BO" EntityType="Self.CAN_BO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANG_KY" EntityType="Self.DANG_KY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KET_QUA_CA_NHAN" EntityType="Self.KET_QUA_CA_NHAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KET_QUA_NHOM" EntityType="Self.KET_QUA_NHOM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHOAN_CHI" EntityType="Self.KHOAN_CHI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHOAN_THU" EntityType="Self.KHOAN_THU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LICH_THI" EntityType="Self.LICH_THI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MON_THI" EntityType="Self.MON_THI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGANH" EntityType="Self.NGANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHOM" EntityType="Self.NHOM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SINH_VIEN" EntityType="Self.SINH_VIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAI_KHOAN" EntityType="Self.TAI_KHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRONG_TAI" EntityType="Self.TRONG_TAI" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DANG_KY_RELATIONS_MON_THI" Association="Self.FK_DANG_KY_RELATIONS_MON_THI">
+      <End Role="MON_THI" EntitySet="MON_THI" />
+      <End Role="DANG_KY" EntitySet="DANG_KY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DANG_KY_RELATIONS_SINH_VIE" Association="Self.FK_DANG_KY_RELATIONS_SINH_VIE">
+      <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+      <End Role="DANG_KY" EntitySet="DANG_KY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KET_QUA__RELATIONS_MON_THI" Association="Self.FK_KET_QUA__RELATIONS_MON_THI">
+      <End Role="MON_THI" EntitySet="MON_THI" />
+      <End Role="KET_QUA_CA_NHAN" EntitySet="KET_QUA_CA_NHAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KET_QUA__RELATIONS_NHOM" Association="Self.FK_KET_QUA__RELATIONS_NHOM">
+      <End Role="NHOM" EntitySet="NHOM" />
+      <End Role="KET_QUA_NHOM" EntitySet="KET_QUA_NHOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KET_QUA__RELATIONS_SINH_VIE" Association="Self.FK_KET_QUA__RELATIONS_SINH_VIE">
+      <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+      <End Role="KET_QUA_CA_NHAN" EntitySet="KET_QUA_CA_NHAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHOAN_CH_RELATIONS_KET_QUA_" Association="Self.FK_KHOAN_CH_RELATIONS_KET_QUA_">
+      <End Role="KET_QUA_CA_NHAN" EntitySet="KET_QUA_CA_NHAN" />
+      <End Role="KHOAN_CHI" EntitySet="KHOAN_CHI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHOAN_TH_RELATIONS_LOP" Association="Self.FK_KHOAN_TH_RELATIONS_LOP">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="KHOAN_THU" EntitySet="KHOAN_THU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LICH_THI_RELATIONS_MON_THI" Association="Self.FK_LICH_THI_RELATIONS_MON_THI">
+      <End Role="MON_THI" EntitySet="MON_THI" />
+      <End Role="LICH_THI" EntitySet="LICH_THI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LICH_THI_RELATIONS_SINH_VIE" Association="Self.FK_LICH_THI_RELATIONS_SINH_VIE">
+      <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+      <End Role="LICH_THI" EntitySet="LICH_THI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOP_RELATIONS_NGANH" Association="Self.FK_LOP_RELATIONS_NGANH">
+      <End Role="NGANH" EntitySet="NGANH" />
+      <End Role="LOP" EntitySet="LOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHOM_RELATIONS_LOP" Association="Self.FK_NHOM_RELATIONS_LOP">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="NHOM" EntitySet="NHOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHOM_RELATIONS_MON_THI" Association="Self.FK_NHOM_RELATIONS_MON_THI">
+      <End Role="MON_THI" EntitySet="MON_THI" />
+      <End Role="NHOM" EntitySet="NHOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SINH_VIE_RELATIONS_LOP" Association="Self.FK_SINH_VIE_RELATIONS_LOP">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SINH_VIE_RELATIONS_NHOM" Association="Self.FK_SINH_VIE_RELATIONS_NHOM">
+      <End Role="NHOM" EntitySet="NHOM" />
+      <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TAI_KHOA_RELATIONS_CAN_BO" Association="Self.FK_TAI_KHOA_RELATIONS_CAN_BO">
+      <End Role="CAN_BO" EntitySet="CAN_BO" />
+      <End Role="TAI_KHOAN" EntitySet="TAI_KHOAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRONG_TA_RELATIONS_MON_THI" Association="Self.FK_TRONG_TA_RELATIONS_MON_THI">
+      <End Role="MON_THI" EntitySet="MON_THI" />
+      <End Role="TRONG_TAI" EntitySet="TRONG_TAI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
